@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Lora', serif;
+    text-align: center;
+    background-color:#111;
+}
+
+h1{
+    position: relative;
+    color:rgb(239, 234, 227);
+    font-size: 6rem;
+    letter-spacing: 1.5px;
+    width: max-content;
+}
+
+h1::before,
+h1::after{
+    content: "";
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+h1::before{
+    background: #111;
+    animation: typewriter 1.8s steps(13) 1s forwards;
+}
+
+h1::after{
+    width: 0.05em;
+    background-color: rgb(239, 234, 227);
+    animation: 
+     typewriter 1.8s steps(13) 1s forwards,
+     blink 600ms steps(13) infinite;
+}
+
+@keyframes typewriter{
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink{
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.begin {
+    position:center;
+    margin-left: 250px;
+    width: 6em;
+    height: 5ex;
+    background-color: #111;
+    border: 2.5px solid rgb(239, 234, 227);
+    border-radius: 35px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 1.5s ease 3.3s forwards;
+}
+
+.begin:hover {
+    background-color: rgb(182, 148, 61);
+}
+
+.begin {
+    font-size: 30px;
+    font-family: 'Lora', sans-serif;
+    font-style: italic;
+}
